@@ -12,24 +12,24 @@
 		</div>
 	<% end %>
 	<div class="field">
-		<%= f.label :email %>
-		<%= f.text_field :email %>
+		<%= f.label :email, :class => "span-2" %>
+		<%= f.text_field :email, :class => "text append-2 last" %>
 	</div>
 	<div class="field">
-		<%= f.label :password %>
-		<%= f.text_field :password %>
+		<%= f.label :password, :class => "span-2" %>
+		<%= f.text_field :password, :class => "text append-2 last" %>
 	</div>
 	<div class="field">
-		<%= f.label :password_confirmation %>
-		<%= f.text_field :password_confirmation %>
+		<%= f.label :password_confirmation, :class => "span-2" %>
+		<%= f.text_field :password_confirmation, :class => "text append-2 last" %>
 	</div>
 	<div class="actions">
-		<%= f.submit %>
+		<%= f.submit "Sign Up" %>
 	</div>
 
 <% end %>
 
 <div>
-	<%= link_to 'Login with Twitter', auth_at_provider_path(:provider => :twitter) %> | 
-	<%= link_to 'Login with Facebook', auth_at_provider_path(:provider => :facebook) %>
+	<%= link_to 'Sign up with Twitter', auth_at_provider_path(:provider => :twitter) %> | 
+	<%= link_to 'Sign up with Facebook', auth_at_provider_path(:provider => :facebook) %>
 </div>

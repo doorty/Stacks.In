@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Stacksin</title>
+  <title>Stacks - Educational resource gathering made simple and social.</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div id="container">
-		<div class="user_nav">
+	<div id="main_container" class="container showgrid">
+		<div class="user_nav span-24">
 			<% if current_user %>
 				Logged in as <%= current_user.email %>.
 				<%= link_to "Log out", logout_path %>
@@ -24,6 +24,9 @@
     	<div id="current_users"> Currently active users: <%= current_users_list %></div>
   	<% end %>
 		<%= yield %>
+		<div class="span-24">
+			footer
+		</div>
 	</div>
 
 </body>

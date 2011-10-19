@@ -28,16 +28,3 @@
     <%= f.submit %>
   </div>
 <% end %>
-I like to put the "forgot password?" form in the same page as the login form:
-
-# app/views/user_sessions/new.html.erb
-...
-<h1>Forgot Password?</h1>
-<%= render 'forgot_password_form' %>
-# app/views/user_sessions/_forgot_password_form.html.erb
-<%= form_tag password_resets_path, :method => :post do %>
-  <div class="field">
-    <%= label_tag :email %><br />
-    <%= text_field_tag :email %> <%= submit_tag "Reset my password!" %>
-  </div>
-<% end %>
