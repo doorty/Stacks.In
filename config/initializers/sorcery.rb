@@ -2,7 +2,7 @@
 # The default is nothing which will include only core features (password encryption, login/logout).
 # Available submodules are: :user_activation, :http_basic_auth, :remember_me,
 # :reset_password, :session_timeout, :brute_force_protection, :activity_logging, :external
-Rails.application.config.sorcery.submodules = [:reset_password, :remember_me, :activity_logging, :external, :brute_force_protection]
+Rails.application.config.sorcery.submodules = [:reset_password, :remember_me, :activity_logging, :external]
 
 # Here you can configure each submodule's features.
 Rails.application.config.sorcery.configure do |config|
@@ -158,15 +158,15 @@ Rails.application.config.sorcery.configure do |config|
                                                                                                 # sent.
 
     # -- brute_force_protection --
-    user.failed_logins_count_attribute_name = :failed_logins_count                  # failed logins attribute name.
+    # user.failed_logins_count_attribute_name = :failed_logins_count                  # failed logins attribute name.
 
-    user.lock_expires_at_attribute_name = :lock_expires_at                          # this field indicates whether
+    # user.lock_expires_at_attribute_name = :lock_expires_at                          # this field indicates whether
                                                                                       # user is banned and when it will
                                                                                       # be active again.
 
-    user.consecutive_login_retries_amount_limit = 50                                # how many failed logins allowed.
+    # user.consecutive_login_retries_amount_limit = 50                                # how many failed logins allowed.
 
-    user.login_lock_time_period = 60 * 60                                           # how long the user should be
+    # user.login_lock_time_period = 60 * 60                                           # how long the user should be
                                                                                       # banned. in seconds. 0 for
                                                                                       # permanent.
 
