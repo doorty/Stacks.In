@@ -2,3 +2,44 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body.home {
+
+	header.main_header {
+		margin:1em;
+		.logo {
+			float:left;
+			width:150px;
+		}
+		.actions {
+			float:right;
+			text-align:right;
+			width:300px;
+		}
+	}
+
+	#main_section {
+		background-color:#f0f0f0;
+		-webkit-border-radius:8px;
+		-moz-border-radius:8px;
+		border-radius:8px;
+	}
+
+	.features {
+		
+	}
+
+	footer {
+		text-align:center;
+		ul {
+			list-style:none;
+			li {
+				display:inline;
+				padding:0 1em;
+				a {
+					color:rgba(0,0,0,.6);
+					text-decoration:none;
+				}
+			}
+		}
+	}
+}

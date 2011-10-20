@@ -2,6 +2,9 @@
 <html>
 <head>
   <title>Stacks - Educational resource gathering made simple and social.</title>
+  <%= stylesheet_link_tag 'blueprint/screen', :media => "screen, projection" %>
+	<%= stylesheet_link_tag 'blueprint/print', :media => "print" %>
+	<!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie', :media => "screen, projection" %><![endif]-->
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>

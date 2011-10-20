@@ -1,0 +1,17 @@
+<%= form_for user do |f| %>
+	<div class="field  prepend-1 span-10 last">
+		<!-- <%= f.label :email %> -->
+		<%= f.text_field :email, :class => "text" %>
+	</div>
+	<div class="field  prepend-1 span-5">
+		<!-- <%= f.label :password %> -->
+		<%= f.text_field :password, :class => "text" %>
+	</div>
+	<div class="field  span-5">
+		<!-- <%= f.label :password_confirmation %> -->
+		<%= f.text_field :password_confirmation, :class => "text" %>
+	</div>
+	<div class="actions">
+		<%= f.submit "Sign Up", :class => "text span-2 prepend-4 last" %>
+	</div>
+<% end %>

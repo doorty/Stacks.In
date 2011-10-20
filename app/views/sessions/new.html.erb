@@ -1,25 +1,30 @@
-<h1>Log in</h1>
+<div id="login_form" class="span-8">
+	<h1>Log in</h1>
+	<%= form_tag sessions_path do %>
+		<div class="field">
+			<%= label_tag :email, nil, :class => "span-2" %>
+			<%= text_field_tag :email, params[:email], :class => "text append-4 last" %>
+		</div>
+		<div class="field">
+			<%= label_tag :password, nil, :class => "span-2" %>
+			<%= text_field_tag :password, '', :class => "text append-4 last" %>
+		</div>
+		<div class="field">
+			<%= check_box_tag :remember_me, 1, params[:remember_me] %>
+			<%= label_tag :remember_me, nil, :class => "" %>
+		</div>
+		<div class="actions">
+			<%= submit_tag "Log in" %>
+		</div>
+	<% end %>
+	<div id="forgot_password" class="span-8">
+		<h3>Forgot Password?</h3>
+		<%= render 'forgot_password_form' %>
+	</div>
+</div>
 
-<%= form_tag sessions_path do %>
-	<div class="field">
-		<%= label_tag :email, nil, :class => "span-2" %>
-		<%= text_field_tag :email, params[:email], :class => "text append-2 last" %>
-	</div>
-	<div class="field">
-		<%= label_tag :password, nil, :class => "span-2" %>
-		<%= text_field_tag :password, '', :class => "text append-2 last" %>
-	</div>
-	<div class="field">
-		<%= label_tag :remember_me, nil, :class => "prepend-2" %>
-		<%= check_box_tag :remember_me, 1, params[:remember_me] %>
-	</div>
-	<div class="actions">
-		<%= submit_tag "Log in" %>
-	</div>
-<% end %>
-
-<%= link_to 'Login with Twitter', auth_at_provider_path(:provider => :twitter) %> | 
-<%= link_to 'Login with Facebook', auth_at_provider_path(:provider => :facebook) %>
-
-<h3>Forgot Password?</h3>
-<%= render 'forgot_password_form' %>
+<div id="external_login" class="span-8">
+	<h3>External Login</h3>
+	<%= link_to 'Login with Twitter', auth_at_provider_path(:provider => :twitter) %> | 
+	<%= link_to 'Login with Facebook', auth_at_provider_path(:provider => :facebook) %>
+</div>

@@ -1,5 +1,40 @@
-<h1>Stacks.in</h1>
-<p>
-Who are we? 
-<%= link_to 'About us', about_path %>
-</p>
+<header class="prepend-top prepend-1 span-10 append-1">
+	<h1>Educational resource gathering made simple and social.</h1>
+	<h2>Sign up now and get free access!</h2>
+</header>
+<div class="signup_form prepend-1 span-10 append-1 append-bottom">
+	<%= form_for User.new do |f| %>
+		<div class="field span-10 last">
+			<!-- <%= f.label :email %> -->
+			<%= f.text_field :email, :class => "text span-10" %>
+		</div>
+		<div class="field span-5">
+			<!-- <%= f.label :password %> -->
+			<%= f.text_field :password, :class => "text span-5" %>
+		</div>
+		<div class="field span-5 last">
+			<!-- <%= f.label :password_confirmation %> -->
+			<%= f.text_field :password_confirmation, :class => "text span-5" %>
+		</div>
+		<div class="actions span-10 last">
+			<%= f.submit "Sign Up", :class => "text span-10 last" %>
+		</div>
+	<% end %>
+</div>
+<hr/>
+<section>
+	<ul class="features prepend-top prepend-1 span-10 append-1 append-bottom">
+		<li>
+			<h3>Feature title 1</h3>
+			<p>Description of the feature</p>
+		</li>
+		<li>
+			<h3>Feature title 2</h3>
+			<p>Description of the feature</p>
+		</li>
+		<li>
+			<h3>Feature title 3</h3>
+			<p>Description of the feature</p>
+		</li>
+	</ul>
+</section>

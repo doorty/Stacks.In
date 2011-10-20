@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stacks - Educational resource gathering made simple and social.</title>
+  <%= stylesheet_link_tag 'blueprint/screen', :media => "screen, projection" %>
+	<%= stylesheet_link_tag 'blueprint/print', :media => "print" %>
+	<!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie', :media => "screen, projection" %><![endif]-->
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="home">
+	<header class="main_header clearfix">
+		<img alt="Stacks" class="logo" src="https://d1g145x70srn7h.cloudfront.net/static/c443266b8f677c64d5af6618f0fd69f7db89ee36/images/public/logotype-dark.png">
+		<div class="actions">
+			<%= link_to "Log in", login_path %>
+		</div>
+	</header>
+	<div class="container">	
+		<section id="main_section" class="span-12">
+			<%= yield %>
+		</section>
+		<footer class="span-12">
+				<ul>
+					<li>
+						<a href="/about">About Us</a>
+					</li>
+					<li>
+						<a href="http://twitter.com/stacksin">@StacksIn</a>
+					</li>
+				</ul>
+			</footer>
+	</div>
+
+</body>
+</html>

@@ -1,33 +1,6 @@
 <h1>Sign Up</h1>
 
-<%= form_for @user do |f| %>
-	<% if @user.errors.any? %>
-		<div class="error_messages">
-			<h2>Form is invalid</h2>
-			<ul>
-				<% for message in @user.errors.full_messages %>
-					<li><%= message %></li>
-					<% end %>
-			</ul>
-		</div>
-	<% end %>
-	<div class="field">
-		<%= f.label :email, :class => "span-2" %>
-		<%= f.text_field :email, :class => "text append-2 last" %>
-	</div>
-	<div class="field">
-		<%= f.label :password, :class => "span-2" %>
-		<%= f.text_field :password, :class => "text append-2 last" %>
-	</div>
-	<div class="field">
-		<%= f.label :password_confirmation, :class => "span-2" %>
-		<%= f.text_field :password_confirmation, :class => "text append-2 last" %>
-	</div>
-	<div class="actions">
-		<%= f.submit "Sign Up" %>
-	</div>
-
-<% end %>
+	<%= render :partial => 'signup_form', :locals => { :user => User.new } %>
 
 <div>
 	<%= link_to 'Sign up with Twitter', auth_at_provider_path(:provider => :twitter) %> | 
