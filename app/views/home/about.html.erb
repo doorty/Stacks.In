@@ -1,2 +1,15 @@
-<h1>Home#about</h1>
-<p>Find me in app/views/home/about.html.erb</p>
+<header class="main_header clearfix">
+	<%= link_to image_tag("logo.png", :border=>0, :class => 'logo'), {:action => 'index', :controller => 'home'}, :class => '' %>
+	<div class="actions">
+		<%= link_to "Log in", login_path, :class => "button gray" %>
+	</div>
+</header>
+<hr/>
+<section class="prepend-1 append-1">
+	<h1>What is Stacks?</h1>
+	<p>Find out the latest and greatest news about how our tiny reader is changing the way people do business. You can also keep up with us via Twitter and Facebook.</p>
+</section>
+<hr/>
+<section class="prepend-1 append-1">
+<p>Find out the latest and greatest news about how our tiny reader is changing the way people do business. You can also keep up with us via Twitter and Facebook.</p>
+</section>

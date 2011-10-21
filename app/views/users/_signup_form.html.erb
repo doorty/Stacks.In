@@ -1,19 +1,17 @@
 <%= form_for user do |f| %>
 	<div class="field span-10 last">
-		<!-- <%= f.label :email %> -->
+		<%= f.label :email, 'Email address' %>
 		<%= f.text_field :email, :class => "title span-10" %>
 	</div>
 	<div class="field span-5">
-		<!-- <%= f.label :password %> -->
+		<%= f.label :password, 'Create password' %>
 		<%= f.text_field :password, :class => "title span-5" %>
 	</div>
 	<div class="field span-5 last">
-		<!-- <%= f.label :password_confirmation %> -->
+		<%= f.label :password_confirmation, 'Confirm password' %>
 		<%= f.text_field :password_confirmation, :class => "title span-5" %>
 	</div>
 	<div class="actions span-10 last">
-		<%= link_to "Sign Up", users_path(user), :method => :post, :remote => true %>
-
-		<%= f.submit "Sign Up", :class => " title span-10 last" %>
+		<%= f.submit "Sign Up For Stacks", :id => "sign_up_submit", :class => "button orange span-10 last" %>
 	</div>
 <% end %>

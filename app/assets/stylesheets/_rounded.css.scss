@@ -1,0 +1,14 @@
+@mixin rounded($side, $radius: 10px) {
+	@if $side != all {
+		-o-border-radius-#{$side}: $radius;
+	  -moz-border-radius-#{$side}: $radius;
+	  -webkit-border-#{$side}-radius: $radius;
+	  border-#{$side}-radius: $radius;
+	}
+	@else {
+		-o-border-radius: $radius;
+	  -moz-border-radius: $radius;
+	  -webkit-border-radius: $radius;
+	  border-radius: $radius;
+	}
+}

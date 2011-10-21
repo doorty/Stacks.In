@@ -5,3 +5,8 @@
  *= require_self
  *= require_tree . 
 */
+
+::selection {
+	background:#ffd996;
+	text-shadow:none;
+}

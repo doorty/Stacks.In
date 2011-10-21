@@ -11,27 +11,27 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-	<div id="main_container" class="container showgrid">
-		<div class="user_nav span-24">
-			<% if current_user %>
-				Logged in as <%= current_user.email %>.
-				<%= link_to "Log out", logout_path %>
-			<% else %>
-				<%= link_to "Sign up", signup_path %> or
-				<%= link_to "Log in", login_path %>.
-			<% end %>
+<body class="home_index">
+	<header class="main_header clearfix">
+		<%= image_tag("logo.png", :border=>0, :class => 'logo') %>
+		<div class="actions">
+			<%= link_to "Log in", login_path, :class => "button gray" %>
 		</div>
-		<% flash.each do |name, msg| %>
-			<%= content_tag :div, msg, :id => "flash_#{name}" %>
-		<% end %>
-		<% if current_user %>
-    	<div id="current_users"> Currently active users: <%= current_users_list %></div>
-  	<% end %>
-		<%= yield %>
-		<div class="span-24">
-			footer
-		</div>
+	</header>
+	<div class="container">	
+		<section id="main_section" class="span-12">
+			<%= yield %>
+		</section>
+		<footer class="span-12">
+				<ul>
+					<li>
+						<a href="/about">About Us</a>
+					</li>
+					<li>
+						<a href="http://twitter.com/stacksin">@StacksIn</a>
+					</li>
+				</ul>
+			</footer>
 	</div>
 
 </body>

@@ -4,16 +4,11 @@
 
 @import "rounded";
 
-body.home {
+body.home_index {
 
-	background: #EBEEF1;
+	background: #EBEEF1 url('home_bg.jpeg');
 
 	header.main_header {
-		background:#fff;
-
-		@include rounded(top-left,10px);
-		@include rounded(top-right,10px);
-
 		padding:1em;
 		.logo {
 			float:left;
@@ -29,10 +24,7 @@ body.home {
 	#main_section {
 		margin-top:10px;
 		background:#f0f0f0 url('home_main_content_bg.png');
-		-webkit-border-radius:8px;
-		-moz-border-radius:8px;
-		-o-border-radius:8px;
-		border-radius:8px;
+		@include rounded(all,10px);
 		moz-box-shadow: 0px 1px 4px rgba(0,0,0,0.5);
 		-webkit-box-shadow: 0px 1px 4px rgba(0,0,0,0.5);
 		-o-box-shadow: 0px 1px 4px rgba(0,0,0,0.5);

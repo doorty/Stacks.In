@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Stacks - Educational resource gathering made simple and social.</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
   <%= stylesheet_link_tag 'blueprint/screen', :media => "screen, projection" %>
 	<%= stylesheet_link_tag 'blueprint/print', :media => "print" %>
 	<!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie', :media => "screen, projection" %><![endif]-->
@@ -10,17 +12,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="home">
-	<header class="main_header clearfix">
-		<img alt="Stacks" class="logo" src="assets/logo.png">
-		<div class="actions">
-			<%= link_to "Log in", login_path %>
-		</div>
-	</header>
+	
 	<div class="container">	
-		<section id="main_section" class="span-12">
+		<section id="main_section" class="span-24">
 			<%= yield %>
 		</section>
-		<footer class="span-12">
+		<footer class="span-24">
 				<ul>
 					<li>
 						<a href="/about">About Us</a>

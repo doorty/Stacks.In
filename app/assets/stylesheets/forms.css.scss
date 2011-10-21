@@ -1,0 +1,30 @@
+
+.field, .actions {
+	position:relative;
+	label {
+		position:absolute;
+		top:.8em;
+		left:.4em;
+		font: {
+			size:1.25em;
+			weight:normal;
+		}
+		color:#a0a0a0;
+	}
+	input {
+		-webkit-border-radius:5px;
+		-moz-border-radius:5px;
+		-o-border-radius:5px;
+		border-radius:5px;
+		font: {
+			size:1.25em;
+		}
+		&:focus {
+			border-color: rgba(255, 162, 0, 0.9);
+		-moz-box-shadow: 0 0 4px 0 rgba(255, 162, 0, 0.9);
+		-webkit-box-shadow: 0 0 4px 0 rgba(255, 162, 0, 0.9);
+		-o-box-shadow: 0 0 4px 0 rgba(255, 162, 0, 0.9);
+		box-shadow: 0 0 4px 0 rgba(255, 162, 0, 0.9);
+		}
+	}
+}
