@@ -4,8 +4,10 @@
 
 body.home {
 
+	background: url('home_bg.jpeg');
+
 	header.main_header {
-		margin:1em;
+		padding:1em;
 		.logo {
 			float:left;
 			width:150px;
@@ -18,14 +20,22 @@ body.home {
 	}
 
 	#main_section {
-		background-color:#f0f0f0;
+		margin-top:10px;
+		background:#f0f0f0 url('home_main_content_bg.png');
 		-webkit-border-radius:8px;
 		-moz-border-radius:8px;
+		-o-border-radius:8px;
 		border-radius:8px;
+		moz-box-shadow: 0px 1px 4px rgba(0,0,0,0.5);
+		-webkit-box-shadow: 0px 1px 4px rgba(0,0,0,0.5);
+		-o-box-shadow: 0px 1px 4px rgba(0,0,0,0.5);
+		box-shadow: 0px 1px 4px rgba(0,0,0,0.5);
 	}
 
 	.features {
-		
+		ul {
+			list-style:none;
+		}
 	}
 
 	footer {
@@ -37,6 +47,7 @@ body.home {
 				padding:0 1em;
 				a {
 					color:rgba(0,0,0,.6);
+					text-shadow:0 1px rgba(255,255,255, 1);
 					text-decoration:none;
 				}
 			}
