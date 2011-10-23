@@ -11,12 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111018174430) do
+ActiveRecord::Schema.define(:version => 20111023214916) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id",    :null => false
     t.string   "provider",   :null => false
     t.string   "uid",        :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contents", :force => true do |t|
+    t.integer  "stack_id"
+    t.string   "description"
+    t.string   "url"
+    t.string   "source"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "stacks", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

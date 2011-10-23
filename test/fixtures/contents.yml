@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  stack_id: 1
+  description: MyString
+  url: MyString
+  source: MyString
+
+two:
+  stack_id: 1
+  description: MyString
+  url: MyString
+  source: MyString

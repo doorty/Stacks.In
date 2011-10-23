@@ -1,5 +1,9 @@
 Stacksin::Application.routes.draw do
 
+  resources :contents
+
+  resources :stacks
+
   get "password_resets/create"
   get "password_resets/edit"
   get "password_resets/update"
