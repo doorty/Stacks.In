@@ -40,7 +40,13 @@ body.home_index {
 				font-size:2em;
 			}
 		}
-		.signup_form {
+		#signup_form {
+			position:relative;
+			.close {
+				position:absolute;
+				right:18px;
+				top:0;
+			}
 			input[type="submit"] {
 				width:390px;
 			}

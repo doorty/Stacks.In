@@ -1,8 +1,15 @@
 <header class="prepend-top prepend-1 span-10 append-1">
 	<h1>Educational resource gathering made simple and social.</h1>
-	<h2>Sign up now and get free access!</h2>
 </header>
-<div class="signup_form prepend-1 span-10 append-1 append-bottom">
+<div id="external_signup" class="external_signup prepend-1 span-10 append-1 append-bottom">
+	<h3>Sign up now for free!</h3>
+	<%= link_to image_tag("facebook-login-button.png", :height=>'29px', :border=>0, :class => ''), auth_at_provider_path(:provider => :twitter) %>
+	<%= link_to image_tag("twitter-login-button.png", :height=>'29px', :border=>0, :class => ''), auth_at_provider_path(:provider => :facebook)  %>
+	<%= link_to "I don't have a Facebook or Twitter account", "#" , :id => "show_external_signup_form", :class => "prepend-top span-10" %>
+</div>
+<div id="signup_form" class="hide signup_form prepend-1 span-10 append-1 append-bottom">
+	<h3>Sign up below</h3>
+	<%= link_to image_tag("close.png", :height =>'25px'), "#", :class => "close span-1", :id => "signup_close" %>
 	<%= render :partial => 'users/signup_form', :locals => { :user => User.new } %>
 </div>
 <hr/>
