@@ -18,10 +18,14 @@
 			<header class="main_header clearfix">
 				<%= link_to image_tag("logo.png", :border=>0, :class => 'logo'), {:action => 'index', :controller => 'home'}, :class => '' %>
 			<div class="actions">
-				<% if logged_in? %>
+				<% if current_page?(signin_path) %>
 					
 				<% else %>
-					<%= link_to "Sign in", login_path, :class => "button gray" %>
+					<% if current_user %>
+						<%= link_to "Sign Out", signout_path, :class => "button white" %>
+					<% else %>
+						<%= link_to "Sign In", signin_path, :class => "button gray" %>
+					<% end %>
 				<% end %>
 			</div>
 </header>

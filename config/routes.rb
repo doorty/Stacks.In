@@ -10,8 +10,8 @@ Stacksin::Application.routes.draw do
 
   get "about" => "home#about", :as => "about"
 
-  get "logout" => "sessions#destroy", :as => "logout"
-  get "login" => "sessions#new", :as => "login"
+  get "signout" => "sessions#destroy", :as => "signout"
+  get "signin" => "sessions#new", :as => "signin"
   get "signup" => "users#new", :as => "signup"
 
   resources :users

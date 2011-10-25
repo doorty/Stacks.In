@@ -3,8 +3,8 @@
 	<h2>Sign up now for free!</h2>
 </header>
 <div id="external_signup" class="external_signup prepend-1 span-10 append-1 append-bottom">
-	<%= link_to image_tag("facebook-login-button.png", :height=>'29px', :border=>0, :class => ''), auth_at_provider_path(:provider => :facebook), :class => "span-5" %>
-	<%= link_to image_tag("twitter-login-button.png", :height=>'29px', :border=>0, :class => ''), auth_at_provider_path(:provider => :twitter), :class => "span-5 last"  %>
+	<%= link_to image_tag("facebook-login-button.png", :height=>'29px', :class => ''), auth_at_provider_path(:provider => :facebook), :class => "span-5" %>
+	<%= link_to image_tag("twitter-login-button.png", :height=>'29px', :class => ''), auth_at_provider_path(:provider => :twitter), :class => "span-5 last"  %>
 	<%= link_to "I don't have a Facebook or Twitter account", "#" , :id => "show_external_signup_form", :class => "prepend-top span-10" %>
 	<%= image_tag("orange_arrow.png", :height=>'80px', :id=>"orange_arrow") %>
 </div>

@@ -42,9 +42,15 @@ body.home {
 				text-shadow:0 1px rgba(255,255,255, 1);
 			}
 		}
-		.signup_form {
-			input[type="submit"] {
+		.signin_form {
+			input[type="submit"]#sign_in_submit {
 				width:390px;
+				font-size:1.25em;
+			}
+		}
+		#forgot_password {
+			input[type="submit"] {
+				width:190px;
 				font-size:1.25em;
 			}
 		}

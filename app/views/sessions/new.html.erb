@@ -1,4 +1,4 @@
-<div id="login_form" class="prepend-1 append-1 span-10">
+<div id="signin_form" class="signin_form prepend-1 append-1 span-10 append-bottom">
 	<h1>Sign in</h1>
 	<%= form_tag sessions_path do %>
 		<div class="field span-10 last">
@@ -9,23 +9,18 @@
 			<%= label_tag :password, nil %>
 			<%= text_field_tag :password, '', :class => "title span-10" %>
 		</div>
-		<div class="field span-10 last">
-			<%= check_box_tag :remember_me, 1, params[:remember_me] %>
-			<%= label_tag :remember_me, nil, :class => "" %>
-		</div>
 		<div class="actions span-10 last">
-			<%= submit_tag "Sign in", :class => "button orange large span-10 last" %>
+			<%= submit_tag "Sign in", :id => "sign_in_submit", :class => "button orange large span-10" %>
 		</div>
 	<% end %>
-	<div id="forgot_password" class="">
-	<h3>Forgot Password?</h3>
-	<%= render 'forgot_password_form' %>
+	<%= link_to "Forgot Password?", "#" , :id => "show_forgot_password_form", :class => "" %>
+	<div id="forgot_password" class="hide append-bottom">
+		<%= render 'forgot_password_form' %>
+	</div>
 </div>
-</div>
-
 
 <div id="external_login" class="prepend-1 append-1 span-10 last">
 	<h3>Sign in with Facebook or Twitter</h3>
-	<%= link_to image_tag("facebook-login-button.png", :height=>'29px', :border=>0, :class => ''), auth_at_provider_path(:provider => :facebook), :class => "span-5" %>
-	<%= link_to image_tag("twitter-login-button.png", :height=>'29px', :border=>0, :class => ''), auth_at_provider_path(:provider => :twitter), :class => "span-5 last"  %>
+	<%= link_to image_tag("facebook-login-button.png", :height=>'29px', :class => ''), auth_at_provider_path(:provider => :facebook), :class => "span-5" %>
+	<%= link_to image_tag("twitter-login-button.png", :height=>'29px', :class => ''), auth_at_provider_path(:provider => :twitter), :class => "span-5 last"  %>
 </div>

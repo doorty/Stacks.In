@@ -15,7 +15,11 @@
 	<header class="main_header clearfix">
 		<%= image_tag("logo.png", :border=>0, :class => 'logo') %>
 		<div class="actions">
-			<%= link_to "Sign in", login_path, :class => "button gray" %>
+			<% if current_user %>
+				<%= link_to "Sign Out", signout_path, :class => "button white" %>
+			<% else %>
+				<%= link_to "Sign In", signin_path, :class => "button gray" %>
+			<% end %>
 		</div>
 	</header>
 	<div class="container">	

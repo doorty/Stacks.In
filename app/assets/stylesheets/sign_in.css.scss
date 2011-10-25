@@ -1,24 +1,3 @@
-.signin {
-	display:block;
-	width:150px;
-	height:24px;
-	
-
-	&.facebook {
-		background-image:url('signin_facebook.png');
-	}
-	&.twitter {
-		background-image:url('signin_twitter.png');
-	}
-
-	&:hover {
-		background-position:0 -23px;
-	}
-	&:active {
-		background-position:0 -48px;
-	}
-}
-
 .login {
 	display:block;
 	width:334px;
