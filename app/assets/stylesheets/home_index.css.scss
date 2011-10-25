@@ -37,7 +37,15 @@ body.home_index {
 				font-size:2.5em;
 			}
 			h2 {
-				font-size:2em;
+				font-size:1.5em;
+			}
+		}
+		#external_signup {
+			position:relative;
+			#orange_arrow {
+				position:absolute;
+				right:-28px;
+				top:-50px;
 			}
 		}
 		#signup_form {

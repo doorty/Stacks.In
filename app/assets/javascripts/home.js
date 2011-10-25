@@ -6,7 +6,7 @@
 
 $(function() {
 		$("#show_external_signup_form").bind('click', function() {
-			$("#signup_form").slideDown('slow', function() {
+			$("#signup_form").slideToggle('slow', function() {
 				// animation finished
 			});
 			return false;
