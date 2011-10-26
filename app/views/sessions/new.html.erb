@@ -1,26 +1,25 @@
-<div id="signin_form" class="signin_form prepend-1 append-1 span-10 append-bottom">
+<div id="external_login" class="prepend-1 append-1 span-18 last append-bottom">
 	<h1>Sign in</h1>
+	<%= link_to image_tag("facebook-login-button.png", :height=>'29px', :class => ''), auth_at_provider_path(:provider => :facebook), :class => "span-5" %>
+	<%= link_to image_tag("twitter-login-button.png", :height=>'29px', :class => ''), auth_at_provider_path(:provider => :twitter), :class => "span-5 last"  %>
+</div>
+<div id="signin_form" class="signin_form prepend-1 append-1 span-18 append-bottom">
+	<h3>Or sign in here if you have a password:</h3>
 	<%= form_tag sessions_path do %>
 		<div class="field span-10 last">
 			<%= label_tag :email, nil %>
-			<%= text_field_tag :email, params[:email], :class => "title span-10" %>
+			<%= text_field_tag :email, params[:email], :class => "title span-10 last" %>
 		</div>
 		<div class="field span-10 last">
 			<%= label_tag :password, nil %>
-			<%= text_field_tag :password, '', :class => "title span-10" %>
+			<%= text_field_tag :password, '', :class => "title span-10 last" %>
 		</div>
 		<div class="actions span-10 last">
-			<%= submit_tag "Sign in", :id => "sign_in_submit", :class => "button orange large span-10" %>
+			<%= submit_tag "Sign In To Stacks", :id => "sign_in_submit", :class => "button orange large span-10 last" %>
 		</div>
 	<% end %>
-	<%= link_to "Forgot Password?", "#" , :id => "show_forgot_password_form", :class => "" %>
-	<div id="forgot_password" class="hide append-bottom">
+	<%= link_to "Forgot Password?", "#" , :id => "show_forgot_password_form", :class => "span-10 last" %>
+	<div id="forgot_password" class="hide append-bottom span-10 last">
 		<%= render 'forgot_password_form' %>
 	</div>
-</div>
-
-<div id="external_login" class="prepend-1 append-1 span-10 last">
-	<h3>Sign in with Facebook or Twitter</h3>
-	<%= link_to image_tag("facebook-login-button.png", :height=>'29px', :class => ''), auth_at_provider_path(:provider => :facebook), :class => "span-5" %>
-	<%= link_to image_tag("twitter-login-button.png", :height=>'29px', :class => ''), auth_at_provider_path(:provider => :twitter), :class => "span-5 last"  %>
 </div>

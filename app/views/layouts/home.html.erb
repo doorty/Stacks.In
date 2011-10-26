@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Stacks - Educational resource gathering made simple and social.</title>
+  <meta name="viewport" content="width=790">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
   <%= stylesheet_link_tag 'blueprint/screen', :media => "screen, projection" %>
@@ -13,26 +14,34 @@
 </head>
 <body class="home">
 	
-	<div class="container">	
-		<section id="main_section" class="span-24">
-			<header class="main_header clearfix">
-				<%= link_to image_tag("logo.png", :border=>0, :class => 'logo'), {:action => 'index', :controller => 'home'}, :class => '' %>
-			<div class="actions">
-				<% if current_page?(signin_path) %>
-					
-				<% else %>
-					<% if current_user %>
-						<%= link_to "Sign Out", signout_path, :class => "button white" %>
-					<% else %>
-						<%= link_to "Sign In", signin_path, :class => "button gray" %>
-					<% end %>
-				<% end %>
-			</div>
-</header>
-<hr/>
-			<%= yield %>
-		</section>
-		<footer class="span-24">
+	<div class="container mobile">	
+		<div class="wrapper prepend-top prepend-1 prepend-top span-17 append-1">
+			<section id="main_section" class="span-17">
+				<header class="main_header clearfix prepend-1 append-1">
+					<div class="span-4">
+						<%= link_to image_tag("logo.png", :border=>0, :class => 'logo'), {:action => 'index', :controller => 'home'}, :class => 'span-4' %>
+					</div>
+					<div class="actions span-11 last">
+						<% if params[:controller] != "sessions" %>
+							<% if current_user %>
+								<%= link_to "Sign Out", signout_path, :class => "button white" %>
+							<% else %>
+								<%= link_to "Sign In", signin_path, :class => "button gray" %>
+							<% end %>
+						<% end %>
+					</div>
+				</header>
+				<hr/>
+				<div id="notice" class="prepend-1 append-1">
+		      <% flash.each do |key, value| %>
+		        <div class="flash <%= key %>">
+		          <%= value %>
+		        </div>
+		      <% end %>
+		    </div>
+				<%= yield %>
+			</section>
+			<footer class="">
 				<ul>
 					<li>
 						<a href="/about">About Us</a>
@@ -42,6 +51,7 @@
 					</li>
 				</ul>
 			</footer>
+		</div>
 	</div>
 
 </body>

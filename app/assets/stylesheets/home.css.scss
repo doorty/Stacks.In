@@ -14,15 +14,18 @@ body.home {
 		@include rounded(top-left,10px);
 		@include rounded(top-right,10px);
 
-		padding:1em;
+		padding-top:1em;
+		padding-bottom:1em;
+
 		.logo {
 			float:left;
+			text-align:left;
 			width:150px;
 		}
 		.actions {
 			float:right;
 			text-align:right;
-			width:300px;
+			margin-top:.3em;
 		}
 	}
 
@@ -50,7 +53,6 @@ body.home {
 		}
 		#forgot_password {
 			input[type="submit"] {
-				width:190px;
 				font-size:1.25em;
 			}
 		}

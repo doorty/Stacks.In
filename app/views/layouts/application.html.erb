@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Stacks - Educational resource gathering made simple and social.</title>
+  <meta name="viewport" content="width=790">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
   <%= stylesheet_link_tag 'blueprint/screen', :media => "screen, projection" %>
@@ -11,25 +12,21 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-	<div id="main_container" class="container showgrid">
-		<div class="user_nav span-24">
-			<% if current_user %>
-				Logged in as <%= current_user.email %>.
-				<%= link_to "Log out", logout_path %>
-			<% else %>
-				<%= link_to "Sign up", signup_path %> or
-				<%= link_to "Log in", login_path %>.
-			<% end %>
-		</div>
+<body class="app">
+	<div id="main_container" class="container mobile showgrid">
+		<header class="user_nav prepend-1 span-18 append-1">
+			User navigation
+		</header>
 		<% flash.each do |name, msg| %>
 			<%= content_tag :div, msg, :id => "flash_#{name}" %>
 		<% end %>
 		<% if current_user %>
     	<div id="current_users"> Currently active users: <%= current_users_list %></div>
   	<% end %>
-		<%= yield %>
-		<div class="span-24">
+  	<section class="prepend-top append-bottom">
+			<%= yield %>
+		</section>
+		<footer class="prepend-top prepend-1 span-18 append-1">
 			footer
 		</div>
 	</div>

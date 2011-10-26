@@ -10,24 +10,11 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+  <div class="field span-18 last">
+    <%= f.label :title %>
+    <%= f.text_field :title, :class => "title span-18 last" %>
   </div>
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :created_at %><br />
-    <%= f.datetime_select :created_at %>
-  </div>
-  <div class="field">
-    <%= f.label :updated_at %><br />
-    <%= f.datetime_select :updated_at %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions span-18 last">
+    <%= f.submit "Create Stack", :class => "button orange large span-18 last" %>
   </div>
 <% end %>

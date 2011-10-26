@@ -1,6 +1,6 @@
 <%= form_for(@content) do |f| %>
   <% if @content.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="">
       <h2><%= pluralize(@content.errors.count, "error") %> prohibited this content from being saved:</h2>
 
       <ul>
@@ -11,23 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :stack_id %><br />
-    <%= f.number_field :stack_id %>
+  <div class="field span-18 last">
+    <%= f.label :stack_id %>
+    <%= f.number_field :stack_id, :class => "title  span-18 last" %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
+  <div class="field span-18 last">
+    <%= f.label :description %>
+    <%= f.text_field :description, :class => "title  span-18 last" %>
   </div>
-  <div class="field">
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
+  <div class="field span-18 last">
+    <%= f.label :url %>
+    <%= f.text_field :url, :class => "title  span-18 last" %>
   </div>
-  <div class="field">
-    <%= f.label :source %><br />
-    <%= f.text_field :source %>
+  <div class="field span-18 last">
+    <%= f.label :source %>
+    <%= f.text_field :source, :class => "title  span-18 last" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions span-18 last">
+    <%= f.submit "Create Content", :class => "button orange large  span-18 last" %>
   </div>
 <% end %>

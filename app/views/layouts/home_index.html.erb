@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Stacks - Educational resource gathering made simple and social.</title>
+  <meta name="viewport" content="width=790">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
   <%= stylesheet_link_tag 'blueprint/screen', :media => "screen, projection" %>
@@ -22,11 +23,18 @@
 			<% end %>
 		</div>
 	</header>
-	<div class="container">	
-		<section id="main_section" class="span-12">
+	<div class="container mobile">	
+		<div id= "notice">
+      <% flash.each do |key, value| %>
+        <div class="flash <%= key %>">
+          <%= value %>
+        </div>
+      <% end %>
+    </div>
+		<section id="main_section" class="prepend-1 span-12">
 			<%= yield %>
 		</section>
-		<footer class="span-12">
+		<footer class="prepend-1 span-12">
 				<ul>
 					<li>
 						<a href="/about">About Us</a>
