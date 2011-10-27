@@ -1,9 +1,6 @@
 class HomeController < ApplicationController
 	layout :choose_layout
-	before_filter :require_login, :only => :secret
-	
-  def index
-  end
+	skip_before_filter :require_login
 
   def about
   end

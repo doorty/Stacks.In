@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_filter :require_login
   rescue_from ActiveRecord::RecordNotFound, :with => :custom_render_404
   protect_from_forgery
 
@@ -13,7 +14,7 @@ class ApplicationController < ActionController::Base
   private
 
   def not_authenticated
-  	redirect_to login_url, :alert => "Please login to access this page"
+  	redirect_to signin_url, :alert => "Please login to access this page"
   end
 
   def custom_render_404

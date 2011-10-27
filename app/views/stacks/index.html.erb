@@ -1,29 +1,31 @@
-<h1>Listing stacks</h1>
+  <div class="prepend-1 append-1">
+  <h1>Listing stacks</h1>
 
-<table>
-  <tr>
-    <th>User</th>
-    <th>Title</th>
-    <th>Created at</th>
-    <th>Updated at</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <table>
+    <tr>
+      <th>User</th>
+      <th>Title</th>
+      <th>Created at</th>
+      <th>Updated at</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
 
-<% @stacks.each do |stack| %>
-  <tr>
-    <td><%= stack.user_id %></td>
-    <td><%= stack.title %></td>
-    <td><%= stack.created_at %></td>
-    <td><%= stack.updated_at %></td>
-    <td><%= link_to 'Show', stack %></td>
-    <td><%= link_to 'Edit', edit_stack_path(stack) %></td>
-    <td><%= link_to 'Destroy', stack, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+  <% @stacks.each do |stack| %>
+    <tr>
+      <td><%= stack.user_id %></td>
+      <td><%= stack.title %></td>
+      <td><%= stack.created_at %></td>
+      <td><%= stack.updated_at %></td>
+      <td><%= link_to 'Show', stack %></td>
+      <td><%= link_to 'Edit', edit_stack_path(stack) %></td>
+      <td><%= link_to 'Destroy', stack, confirm: 'Are you sure?', method: :delete %></td>
+    </tr>
+  <% end %>
+  </table>
 
-<br />
+  <br />
 
-<%= link_to 'New Stack', new_stack_path %>
+  <%= link_to 'New Stack', new_stack_path %>
+</div>

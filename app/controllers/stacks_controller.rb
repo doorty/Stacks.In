@@ -1,8 +1,10 @@
 class StacksController < ApplicationController
+  skip_before_filter :require_login, :only => [:index, :show]
+
   # GET /stacks
   # GET /stacks.json
   def index
-    @stacks = Stack.all
+    @stacks = Stack.find(:all, :order => "updated_at") #Stack.all
 
     respond_to do |format|
       format.html # index.html.erb

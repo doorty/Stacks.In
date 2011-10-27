@@ -1,4 +1,5 @@
 class ContentsController < ApplicationController
+  skip_before_filter :require_login, :only => [:index, :show]
   # GET /contents
   # GET /contents.json
   def index
