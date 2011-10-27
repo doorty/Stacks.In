@@ -41,12 +41,12 @@ Rails.application.config.sorcery.configure do |config|
 
   config.twitter.key = "zfFH4Hdic5AfnGqOjUbESw"
   config.twitter.secret = "hQLCOVqfS6DDNvDp9wuBA2HUOH7CtTeqe7HvtdteWg"
-  config.twitter.callback_url = "http://0.0.0.0:3000/oauths/callback?provider=twitter"
+  config.twitter.callback_url = "http://stacks.in:3000/oauths/callback?provider=twitter"
   config.twitter.user_info_mapping = {:name => "name"}
   #
   config.facebook.key = "279443092078317"
   config.facebook.secret = "8da0ac0af9b9d37a647c17e8c7138502"
-  config.facebook.callback_url = "http://0.0.0.0:3000/oauths/callback?provider=facebook"
+  config.facebook.callback_url = "http://stacks.in:3000/oauths/callback?provider=facebook"
   config.facebook.user_info_mapping = {:name => "name", :email => "email"}
   #
   # config.github.key = ""

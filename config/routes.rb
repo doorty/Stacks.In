@@ -1,8 +1,10 @@
 Stacksin::Application.routes.draw do
 
-  resources :contents
+  get "profiles/show"
 
+  resources :contents
   resources :stacks
+  resources :profiles
 
   get "password_resets/create"
   get "password_resets/edit"
@@ -22,6 +24,8 @@ Stacksin::Application.routes.draw do
   end
   
   match "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
+
+  match "/:user_id" => "profiles#show" 
 
   root :to => "home#index"
 
