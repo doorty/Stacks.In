@@ -45,6 +45,7 @@ body.home {
 				text-shadow:0 1px rgba(255,255,255, 1);
 			}
 		}
+
 		.signin_form {
 			input[type="submit"]#sign_in_submit {
 				width:390px;
@@ -58,63 +59,7 @@ body.home {
 		}
 	}
 
-	.features {
-		ul {
-			list-style:none;
-			li {
-				text-shadow:0 1px rgba(255,255,255, 1);
-				padding-left:75px;
-				background: {
-					repeat:no-repeat;
-				}
-				min-height:55px;
-				h3 {
-					font-size:1.65em;
-					margin-bottom:.25em;
-				}
-				h4 {
-					font-size:1.4em;
-					color:#666;
-				}
-				&.feature-1 {
-					background-image:url('feature-1.gif');
-				}
-				&.feature-2 {
-					background-image:url('feature-2.gif');
-				}
-				&.feature-3 {
-					background-image:url('feature-3.gif');
-				}
-				&.feature-4 {
-					background-image:url('feature-4.gif');
-				}
-				&.feature-5 {
-					background-image:url('feature-5.gif');
-				}
-				&.feature-6 {
-					background-image:url('feature-6.gif');
-				}
-				&.feature-7 {
-					background-image:url('feature-7.gif');
-				}
-				&.feature-8 {
-					background-image:url('feature-8.gif');
-				}
-			}
-		}
-	}
-
-	.schools {
-		ul {
-			list-style:none;
-			li {
-				text-shadow:0 1px rgba(255,255,255, 1);
-			}
-		}
-	}
-
 	footer {
-		margin-top:1em;
 		text-align:center;
 		ul {
 			list-style:none;
