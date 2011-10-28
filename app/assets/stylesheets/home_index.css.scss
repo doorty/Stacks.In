@@ -31,18 +31,16 @@ body.home_index {
 		-o-box-shadow: 0px 1px 4px rgba(0,0,0,0.5);
 		box-shadow: 0px 1px 4px rgba(0,0,0,0.5);
 		header {
-			h1, h2 {
-				text-shadow:0 1px rgba(255,255,255, 1);
-			}
 			h1 {
 				font-size:2.5em;
-			}
-			h2 {
-				font-size:1.5em;
-			}
+				text-shadow:0 1px rgba(255,255,255, 1);
+			}	
 		}
 		#external_signup {
 			position:relative;
+			h2 {
+				font-size:1.5em;
+			}
 			#orange_arrow {
 				position:absolute;
 				right:-28px;

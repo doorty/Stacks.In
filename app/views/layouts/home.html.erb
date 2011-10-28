@@ -22,7 +22,9 @@
 						<%= link_to image_tag("logo.png", :border=>0, :class => 'logo'), {:action => 'index', :controller => 'home'}, :class => 'span-4' %>
 					</div>
 					<div class="actions span-11 last">
-						<% if params[:controller] != "sessions" %>
+						<% if params[:controller] == "sessions" %>
+							<%= link_to "Sign Up", signup_path(:anchor => "external_signup"), :class => "button gray" %>
+						<% else %>
 							<% if current_user %>
 								<%= link_to "Sign Out", signout_path, :class => "button white" %>
 							<% else %>

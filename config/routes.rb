@@ -14,12 +14,13 @@ Stacksin::Application.routes.draw do
 
   get "signout" => "sessions#destroy", :as => "signout"
   get "signin" => "sessions#new", :as => "signin"
-  get "signup" => "users#new", :as => "signup"
+  get "signup" => "home#index", :as => "signup"
+  # get "signup" => "users#new", :as => "signup"
 
-  resources :users do
-    resources :stacks do
-      resources :contents
-    end
+  resources :users
+
+  resources :stacks do
+    resources :contents
   end
 
   resources :sessions
