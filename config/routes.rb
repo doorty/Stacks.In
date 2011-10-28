@@ -2,8 +2,8 @@ Stacksin::Application.routes.draw do
 
   get "profiles/show"
 
-  resources :contents
-  resources :stacks
+  
+  
   resources :profiles
 
   get "password_resets/create"
@@ -16,7 +16,12 @@ Stacksin::Application.routes.draw do
   get "signin" => "sessions#new", :as => "signin"
   get "signup" => "users#new", :as => "signup"
 
-  resources :users
+  resources :users do
+    resources :stacks do
+      resources :contents
+    end
+  end
+
   resources :sessions
   resources :password_resets
   resource :oauths do
