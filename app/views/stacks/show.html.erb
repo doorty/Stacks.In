@@ -1,23 +1,14 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>User:</b>
-  <%= @stack.user_id %>
-</p>
-
 <p>
   <b>Title:</b>
   <%= @stack.title %>
 </p>
-
 <p>
-  <b>Created at:</b>
-  <%= @stack.created_at %>
+	<%= render :partial => 'contents/form', :locals => { :stack => @stack, :content => Content.new } %>
 </p>
-
 <p>
-  <b>Updated at:</b>
-  <%= @stack.updated_at %>
+	<% @stack.contents.each do |c| %>
+		Stack: <%= c.description %>
+	<% end %>
 </p>
 
 

@@ -1,19 +1,8 @@
-<%= form_for(@content) do |f| %>
-  <% if @content.errors.any? %>
-    <div id="error_explanation" class="">
-      <h2><%= pluralize(@content.errors.count, "error") %> prohibited this content from being saved:</h2>
-
-      <ul>
-      <% @content.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_for content do |f| %>
 
   <div class="field span-18 last">
     <%= f.label :stack_id %>
-    <%= f.number_field :stack_id, :class => "title  span-18 last" %>
+    <%= f.hidden_field :stack_id, :class => "title  span-18 last", :value => @stack.id %>
   </div>
   <div class="field span-18 last">
     <%= f.label :description %>
@@ -28,6 +17,6 @@
     <%= f.text_field :source, :class => "title  span-18 last" %>
   </div>
   <div class="actions span-18 last">
-    <%= f.submit "Create Content", :class => "button orange large  span-18 last" %>
+    <%= f.submit :class => "button orange large  span-18 last" %>
   </div>
 <% end %>

@@ -19,15 +19,17 @@ Stacksin::Application.routes.draw do
 
   resources :users
 
-  resources :stacks do
-    resources :contents
-  end
-
   resources :sessions
   resources :password_resets
   resource :oauths do
     get :callback
   end
+
+  resources :stacks do
+    resource :contents
+  end
+
+  resource :contents
   
   match "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
 

@@ -43,7 +43,7 @@ class StacksController < ApplicationController
   # POST /stacks.json
   def create
     @stack = Stack.new(params[:stack])
-    @stack = current_user.id
+    @stack.user_id = current_user.id
 
     respond_to do |format|
       if @stack.save
